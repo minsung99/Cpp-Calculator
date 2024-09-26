@@ -97,7 +97,7 @@ void keyboardinput() {
 		init();
 		input('+');
 	}
-	if (GetAsyncKeyState(0x41) & 0x001) {
+	if ((GetAsyncKeyState(0x41) & 0x001) || (GetAsyncKeyState(VK_SHIFT) & 0x8000) && (GetAsyncKeyState(0xBB) & 0x001)) {
 		init();
 		input('+');
 	}
