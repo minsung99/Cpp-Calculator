@@ -85,7 +85,7 @@ void keyboardinput() {
 		init();
 		input('*');
 	}
-	if (GetAsyncKeyState(0x53) & 0x001) {
+	if ((GetAsyncKeyState(0x53) & 0x001) || (GetAsyncKeyState(0xBD) & 0x001)) {
 		init();
 		input('-');
 	}
